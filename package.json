@@ -1,0 +1,30 @@
+{
+  "name": "ajax-beforeunload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrblueblue/ajax-beforeunload.git"
+  },
+  "keywords": [
+    "ajax",
+    "onbeforeunload",
+    "onunload",
+    "browser",
+    "compatibility"
+  ],
+  "author": "Jonathan HUang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrblueblue/ajax-beforeunload/issues"
+  },
+  "homepage": "https://github.com/mrblueblue/ajax-beforeunload#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3"
+  }
+}

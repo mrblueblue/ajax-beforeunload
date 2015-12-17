@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>AJAX Before Unload</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Testing AJAX Before Unload</h1>
+    <p>Navigate away from the page and see if a POST request reaches the server!</p>
+    <script>
+      (function(){
+        var unload = function(e){
+          $.ajax({
+            url: 'http://YOUR_IP_ADDRESS:3000/endpoint',
+            type: 'POST',
+            contentType: 'text/plain',
+            data: '{data: payloadString}'
+          });
+        }
+
+        if ('onbeforeunload' in window){
+          console.log('hello')
+          window.addEventListener('beforeunload', unload);
+          return;
+        }
+
+        if ('onunload' in window){
+          window.addEventListener('unload', unload);
+          return;
+        }
+      }())
+    </script>
+  </body>
+</html>
